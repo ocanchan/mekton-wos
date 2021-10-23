@@ -1,0 +1,2608 @@
+/*! HTML5 Boilerplate v5.2.0 | MIT License | https://html5boilerplate.com/ */
+
+
+@font-face {
+    font-family: 'green_screenregular';
+    src: url('fonts/greenscr-webfont.eot');
+    src: url('fonts/greenscr-webfont-1.eot') format('embedded-opentype'),
+         url('fonts/greenscr-webfont.woff2') format('woff2'),
+         url('fonts/greenscr-webfont.woff') format('woff'),
+         url('fonts/greenscr-webfont.ttf') format('truetype');
+
+}
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html {
+    color: #222;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+
+/*
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ */
+
+::-moz-selection {
+    background: #0082BB;
+    color:black;
+    text-shadow: none;
+}
+
+::selection {
+    background: #0082BB;
+    color:black;
+    text-shadow: none;
+}
+
+
+/*
+ * A better looking default horizontal rule
+ */
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+
+/*
+ * Remove the gap between audio, canvas, iframes,
+ * images, videos and the bottom of their containers:
+ * https://github.com/h5bp/html5-boilerplate/issues/440
+ */
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+    resize: vertical;
+}
+
+
+/* ==========================================================================
+   Browser Upgrade Prompt
+   ========================================================================== */
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+
+/*
+ * Hide visually and from screen readers:
+ */
+
+.hidden {
+    display: none !important;
+}
+
+
+/*
+ * Hide only visually, but have it available for screen readers:
+ * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+ */
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+
+/*
+ * Extends the .visuallyhidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+
+/*
+ * Hide visually and from screen readers, but maintain layout
+ */
+
+.invisible {
+    visibility: hidden;
+}
+
+
+/*
+ * Clearfix: contain floats
+ *
+ * For modern browsers
+ * 1. The space content is one way to avoid an Opera bug when the
+ *    `contenteditable` attribute is included anywhere else in the document.
+ *    Otherwise it causes space to appear at the top and bottom of elements
+ *    that receive the `clearfix` class.
+ * 2. The use of `table` rather than `block` is only necessary if using
+ *    `:before` to contain the top-margins of child elements.
+ */
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    /* 1 */
+    display: table;
+    /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+
+/* ==========================================================================
+   Fontz
+   ========================================================================== */
+
+@font-face {
+    font-family: 'lucida_sans_unicoderegular';
+    src: url('fonts/l_10646-webfont.eot');
+    src: url('fonts/l_10646-webfont-1.eot') format('embedded-opentype'), url('fonts/l_10646-webfont.woff2') format('woff2'), url('fonts/l_10646-webfont.woff') format('woff'), url('fonts/l_10646-webfont.ttf') format('truetype');
+}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+a{color:#f90;}
+.ui-resizable-handle{z-index: 123456;}
+
+   #tooltip {
+    position: absolute;
+    z-index: 3000;
+    border: 1px solid silver;
+    background-color: rgba(0, 0, 0, 0.99);
+    padding: 10px;
+    opacity: 0.95;
+    color:white;
+    max-width: 350px;
+     box-shadow: 0px 0px 25px black;
+	 word-wrap: break-word;
+	 text-align:center;
+}
+#tooltip h3, #tooltip div { margin: 0; }
+#tooltip h3{display: block; text-align: center; padding-bottom:5px;}
+
+#tooltip img{max-height:200px;
+max-width: 200px; margin:0 auto;}
+
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    /*font-family: lucida_sans_unicoderegular, sans-serif;*/
+    font-family: 'Titillium Web', sans-serif;
+    overflow: hidden;
+}
+
+ul,
+li {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+/* Desktop */
+
+#fbifilescont {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #295d70;
+    background-image: url('../img/desktop-background.png');
+    background-position: center center;
+    background-size: cover;
+	top:0px;
+	left:0px;
+}
+
+#fbidesktop {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+}
+
+#fbidesktopinner {
+    position: absolute;
+    width: 100%;
+    z-index: 5;
+    margin: 30px 0px;
+    height: 93%;
+}
+
+
+/* Top Menu */
+
+#fbitopmenu {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 9999999;
+    width: 100%;
+    height: auto;
+}
+
+#fbitopmenuinner {
+    cursor: default;
+    position: relative;
+    width: auto;
+    height: 26px;
+    box-shadow: 0px 0px 5px black;
+    font-size: 13px;
+	font-weight:bold;
+    text-shadow: 1px 0px 0px #bfc9ce, -1px 0px 0px #bfc9ce, 0px 1px 0px #bfc9ce, 0px -1px 0px #bfc9ce;
+    line-height: 18px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    border: 1px solid #bfc9ce;
+    background: -moz-linear-gradient(top, rgba(156,190,203,0.92) 0%, rgba(94,148,170,0.92) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(156,190,203,0.92)), color-stop(100%,rgba(94,148,170,0.92)));
+    background: -webkit-linear-gradient(top, rgba(156,190,203,0.92) 0%,rgba(94,148,170,0.92) 100%);
+    background: -o-linear-gradient(top, rgba(156,190,203,0.92) 0%,rgba(94,148,170,0.92) 100%);
+    background: -ms-linear-gradient(top, rgba(156,190,203,0.92) 0%,rgba(94,148,170,0.92) 100%);
+    background: linear-gradient(to bottom, rgba(156,190,203,0.92) 0%,rgba(94,148,170,0.92) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e69cbecb', endColorstr='#e65e94aa',GradientType=0 );
+}
+
+#fbitopmenuinner img {
+    vertical-align: text-top;
+    margin-right: 5px;
+}
+
+#fbitopmenuinner img.fbilangswitcherflag{
+	vertical-align:middle;
+	max-height:20px;
+}
+
+#fbitopmenuinnerleft {
+    height: 20px;
+    float: left;
+    margin: 3px 0px 0px 5px;
+}
+
+#fbitopmenuinnerleft > ul,  #fbitopmenuinnerright > ul {
+    display: inline-block;
+    position: relative;
+    height: 20px;
+}
+
+#fbitopmenuinnerleft > ul:before, #fbitopmenuinnerright > ul:after {
+    content: "|";
+    display: inline-block;
+    margin: 0px 10px;
+}
+
+#fbitopmenuinnerleft > ul ul, #fbitopmenuinnerright > ul ul {
+    display: none;
+    position: relative;
+}
+
+#fbitopmenuinnerleft > ul > li, #fbitopmenuinnerright > ul > li {
+    display: inline-block;
+    margin: 0px 20px;
+    position: relative;
+    height: 100%;
+    list-style: none;
+}
+
+#fbitopmenuinnerright > ul > li{
+	margin:0px;
+}
+
+#fbitopmenuinnerleft > ul > li a, #fbitopmenuinnerright > ul > li a, #fbitopmenuinnerright > a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 0px 5px;
+}
+
+#fbitopmenuinnerright > a.langx{
+	display:inline;
+	animation: invalidstringblink 0.8s linear infinite alternate;
+}
+
+#fbitopmenuinnerleft > ul > li:hover > a,
+#fbitopmenuinnerleft > ul > li > ul > li:hover > a,
+#fbitopmenuinnerright > ul > li:hover > a,
+#fbitopmenuinnerright > ul > li > ul > li:hover > a,
+#fbitopmenuinnerright  > a.langx:hover {
+    color: #bfc9ce;
+    text-decoration: underline;
+    text-shadow: 1px 0px 0px black, -1px 0px 0px black, 0px 1px 0px black, 0px -1px 0px black;
+}
+
+#fbitopmenuinnerleft > ul > li:hover > ul, #fbitopmenuinnerright > ul > li:hover > ul  {
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: -7px;
+    min-width: 250px;
+    padding: 3px 6px;
+    border: 1px solid #bfc9ce;
+    background: -moz-linear-gradient(top, rgba(156,190,203,0.92) 0%, rgba(94,148,170,0.92) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(156,190,203,0.92)), color-stop(100%,rgba(94,148,170,0.92)));
+    background: -webkit-linear-gradient(top, rgba(156,190,203,0.92) 0%,rgba(94,148,170,0.92) 100%);
+    background: -o-linear-gradient(top, rgba(156,190,203,0.92) 0%,rgba(94,148,170,0.92) 100%);
+    background: -ms-linear-gradient(top, rgba(156,190,203,0.92) 0%,rgba(94,148,170,0.92) 100%);
+    background: linear-gradient(to bottom, rgba(156,190,203,0.92) 0%,rgba(94,148,170,0.92) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e69cbecb', endColorstr='#e65e94aa',GradientType=0 );
+}
+
+#fbitopmenuinnerleft > ul > li > ul > li, #fbitopmenuinnerright > ul > li > ul > li {
+    list-style: none;
+    margin: 8px 0px;
+}
+
+#fbitopmenuinnerright {
+    float: right;
+    margin: 3px 5px 0px 0px;
+}
+#google_translate_element{display:inline-block; margin-right:15px; position:relative; top:-2px;}
+
+/* Bottom Menu */
+
+#fbibottommenu {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    z-index: 9999999;
+    width: 100%;
+    height: auto;
+}
+
+#fbibottommenuinner {
+    cursor: default;
+    position: relative;
+    width: auto;
+    height: 32px;
+    box-shadow: 0px 0px 5px black;
+    font-size: 13px;
+    text-shadow: 1px 0px 0px #bfc9ce, -1px 0px 0px #bfc9ce, 0px 1px 0px #bfc9ce, 0px -1px 0px #bfc9ce;
+    line-height: 18px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    border: 1px solid #bfc9ce;
+    background: -moz-linear-gradient(top, rgba(156,190,203,0.92) 0%, rgba(94,148,170,0.92) 100%);
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(156,190,203,0.92)), color-stop(100%,rgba(94,148,170,0.92)));
+background: -webkit-linear-gradient(top, rgba(156,190,203,0.92) 0%,rgba(94,148,170,0.92) 100%);
+background: -o-linear-gradient(top, rgba(156,190,203,0.92) 0%,rgba(94,148,170,0.92) 100%);
+background: -ms-linear-gradient(top, rgba(156,190,203,0.92) 0%,rgba(94,148,170,0.92) 100%);
+background: linear-gradient(to bottom, rgba(156,190,203,0.92) 0%,rgba(94,148,170,0.92) 100%);
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e69cbecb', endColorstr='#e65e94aa',GradientType=0 );
+}
+
+#fbibottommenuinner img {
+    vertical-align: text-top;
+    margin-right: 5px;
+}
+
+#fbibottommenuinnerleft {
+    height: 30px;
+    float: left;
+    margin: 1px 0px 0px 2px;
+    overflow: hidden;
+    max-width: 90%;
+}
+
+#fbibottommenuinnerleft .fbibottommenuinnerleftbutton {
+    height: 28px;
+    border: 1px solid #2B6579;
+    background-color: #C0DBE5;
+    display: inline-block;
+    margin-right: 3px;
+    padding-left: 28px;
+    background-image: url('../img/ico-fil.png');
+    background-repeat: no-repeat;
+    background-position: 4px center;
+    width: 184px;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#fbibottommenuinnerleft .fbibottommenuinnerleftbutton i{font-style: normal;}
+#fbibottommenuinnerleft .fbibottommenuinnerleftbutton i:before{
+    content:"[";
+}
+#fbibottommenuinnerleft .fbibottommenuinnerleftbutton i:after{
+    content:"]";
+}
+
+#fbibottommenuinnerleft .fbibottommenuinnerleftbutton:hover {
+    background-color: #D0E7EF;
+}
+
+#fbibottommenuinnerleft .fbibottommenuinnerleftbutton.active {
+    background-color: white;
+}
+
+#fbibottommenuinnerright {
+    height: 26px;
+    float: right;
+    margin: 7px 8px 0px 0px;
+    font-size: 16px;
+}
+
+
+/* Desktop Icons */
+
+.fbidesktopicon {
+    position: absolute;
+    width: 120px;
+    height: 120px;
+    /*overflow: hidden; */
+    top: 100px;
+    left: 100px;
+    cursor: pointer;
+    display: block;
+}
+
+.fbidesktopicon.ui-draggable-dragging {
+    opacity: 0.7;
+    outline: none !important;
+     background-color: transparent !important
+}
+
+.fbidesktopicon .fbidesktopiconimg {
+    background-image: url("../img/desktop-icons.png");
+    display: block;
+    width: 86px;
+    height: 86px;
+    position: absolute;
+    top: 0px;
+    left: 18px;
+    z-index: 5;
+}
+
+.fbidesktopicon .fbidesktopiconname {
+    display: block;
+    text-decoration: none;
+    font-size: 12px;
+    text-align: center;
+    z-index: 10;
+    top: 80px;
+    left: 0px;
+    position: absolute;
+    width: 100%;
+}
+
+.fbidesktopicon .fbidesktopiconname b {
+    font-weight: normal;
+    color: white;
+    text-shadow: 0px 2px 3px black;
+    text-align: center;
+    padding: 1px;
+}
+
+.fbidesktopicon:hover  {
+     outline: 1px solid #5F8696;
+     background-color: rgba(95,134,150, 0.3);
+}
+
+.fbidesktopicon.iconactive b {
+    color: black;
+    background-color: white;
+    text-shadow: none;
+}
+
+.fbiinnericon{
+    background-image: url("../img/desktop-icons.png");
+    display: block;
+    width: 86px;
+    height: 86px;
+    margin-right: 5px;
+    position: absolute;
+    top:-8px;
+    left:0px;
+
+ 
+}
+
+/*.fbidesktopicon:active b {
+    color: black;
+    background-color: #0084bd;
+    text-shadow: none;
+}
+*/
+.fbidesktopicon1 .fbidesktopiconimg, .fbiinnericon1 {
+    background-position: -173px 0px;
+}
+
+.fbidesktopicon1.iconactive .fbidesktopiconimg {
+    background-position: -173px -86px;
+}
+
+.fbidesktopicon1.active .fbidesktopiconimg {
+    background-position: -173px -172px;
+}
+
+.fbidesktopicon2 .fbidesktopiconimg, .fbiinnericon2 {
+    background-position: 86px 0px;
+}
+
+.fbidesktopicon2.iconactive .fbidesktopiconimg {
+    background-position: 86px -86px;
+}
+
+.fbidesktopicon2.active .fbidesktopiconimg {
+    background-position: 86px -172px;
+}
+
+.fbidesktopicon3 .fbidesktopiconimg, .fbiinnericon3 {
+    background-position: 172px 0px;
+}
+
+.fbidesktopicon3.iconactive .fbidesktopiconimg {
+    background-position: 172px -86px;
+}
+
+.fbidesktopicon3.active .fbidesktopiconimg {
+    background-position: 172px -172px;
+}
+
+.fbidesktopicon4 .fbidesktopiconimg, .fbiinnericon4 {
+    background-position: 256px 0px;
+}
+
+.fbidesktopicon4.iconactive .fbidesktopiconimg {
+    background-position: 256px -86px;
+}
+
+.fbidesktopicon4.active .fbidesktopiconimg {
+    background-position: 256px -172px;
+}
+
+.fbidesktopicon5 .fbidesktopiconimg, .fbiinnericon5 {
+    background-position: 342px 0px;
+}
+
+.fbidesktopicon5.iconactive .fbidesktopiconimg {
+    background-position: 342px -86px;
+}
+
+.fbidesktopicon5.active .fbidesktopiconimg {
+    background-position: 342px -172px;
+}
+
+.fbidesktopicon6 .fbidesktopiconimg, .fbiinnericon6 {
+    background-position: 428px 0px;
+}
+
+.fbidesktopicon6.iconactive .fbidesktopiconimg {
+    background-position: 428px -86px;
+}
+
+.fbidesktopicon6.active .fbidesktopiconimg {
+    background-position: 428px -172px;
+}
+
+.fbidesktopicon7 .fbidesktopiconimg, .fbiinnericon7 {
+    background-position: 514px 0px;
+}
+
+.fbidesktopicon7.iconactive .fbidesktopiconimg {
+    background-position: 514px -86px;
+}
+
+.fbidesktopicon7.active .fbidesktopiconimg {
+    background-position: 514px -172px;
+}
+
+.fbidesktopicon8 .fbidesktopiconimg, .fbiinnericon8 {
+    background-position: 600px 0px;
+}
+
+.fbidesktopicon8.iconactive .fbidesktopiconimg {
+    background-position: 600px -86px;
+}
+
+.fbidesktopicon8.active .fbidesktopiconimg {
+    background-position: 600px -172px;
+}
+
+.fbidesktopicon9 .fbidesktopiconimg, .fbiinnericon9 {
+    background-position: 686px 0px;
+}
+
+.fbidesktopicon9.iconactive .fbidesktopiconimg {
+    background-position: 686px -86px;
+}
+
+.fbidesktopicon9.active .fbidesktopiconimg {
+    background-position: 686px -172px;
+}
+
+.fbidesktopicon10 .fbidesktopiconimg, .fbiinnericon10 {
+    background-position: 772px 0px;
+}
+
+.fbidesktopicon10.iconactive .fbidesktopiconimg {
+    background-position: 772px -86px;
+}
+
+.fbidesktopicon10.active .fbidesktopiconimg {
+    background-position: 772px -172px;
+}
+
+.fbidesktopicon11 .fbidesktopiconimg, .fbiinnericon11 {
+    background-position: 858px 0px;
+}
+
+.fbidesktopicon11.iconactive .fbidesktopiconimg {
+    background-position: 858px -86px;
+}
+
+.fbidesktopicon11.active .fbidesktopiconimg {
+    background-position: 858px -172px;
+}
+
+.fbidesktopicon12 .fbidesktopiconimg, .fbiinnericon12 {
+    background-position: 944px 0px;
+}
+
+.fbidesktopicon12.iconactive .fbidesktopiconimg {
+    background-position: 944px -86px;
+}
+
+.fbidesktopicon12.active .fbidesktopiconimg {
+    background-position: 944px -172px;
+}
+
+
+.fbidesktopicon13 .fbidesktopiconimg, .fbiinnericon1 {
+    background-position: -87px 0px;
+}
+
+.fbidesktopicon13.iconactive .fbidesktopiconimg {
+    background-position: -87px -86px;
+}
+
+.fbidesktopicon13.active .fbidesktopiconimg {
+    background-position: -87px -172px;
+}
+
+
+
+.fbidesktopicon14 .fbidesktopiconimg, .fbiinnericon14 {
+    background-position: -4px 0px;
+}
+
+.fbidesktopicon14.iconactive .fbidesktopiconimg {
+    background-position: -4px -86px;
+}
+
+.fbidesktopicon14.active .fbidesktopiconimg {
+    background-position: -4px -172px;
+}
+
+
+/* FBI Window */
+
+.fbiwindow {
+    position: absolute !important;
+    z-index: 20;
+
+    border: 1px solid #3E5A6D;
+    width: 83%;
+    height: 85%;
+    max-height: 90%;
+    max-width: 90%;
+    color: white;
+    font-size: 14px;
+    /*   overflow-y:scroll;
+    overflow-x:hidden;*/
+    top: 10%;
+    left: 7%;
+    display: none;
+}
+.fbiwindow.active{border: 1px solid #bfc9ce;}
+
+.istouch .fbiwindow{
+    border: 5px solid #3E5A6D;
+}
+.istouch .fbiwindow.active{border: 5px solid #bfc9ce;}
+
+
+.fbiwindowloading {
+    position: absolute;
+    z-index: 200000;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    color: white;
+}
+
+.fbiwindowloading div {
+    padding-top: 10%;
+    font-size: 45px !important;
+    font-weight: bold;
+    text-align: center;
+}
+
+.fbiwindowloading div i {
+    font-size: 105px !important;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.fbiwindowloading span{font-size:20px !important; display: block;}
+
+
+/*.fbiwindow.fbiwindowsuspectdatabase{top:10%; left:7%;}
+.fbiwindow.fbiwindowheistdatabase{top:12%; left:9%}
+.fbiwindow.fbiwindowfirearmsdatabase{top:14%; left:11%}
+.fbiwindow.fbiwindowmodus{top:16%; left:13%}
+.fbiwindow.fbiwindowclowncase{top:18%; left:15%}
+.fbiwindow.fbiwindowagencyassets{top:20%; left:17%}
+.fbiwindow.fbiwindowinternal{top:22%; left:19%}
+*/
+
+.fbiwindow.fbiwindowerrors {
+    top: 42%;
+    left: 32%;
+    width: 30%;
+    height: 20%;
+    z-index: 999999 !important;
+}
+
+.fbiwindow.active {
+    box-shadow: 0px 0px 25px black;
+}
+
+.fbiwindow .fbiwindowtitle {
+    cursor: default;
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    height: 26px;
+    box-shadow: 0px 0px 5px black;
+    z-index: 50;
+    font-size: 13px;
+    text-shadow: 1px 0px 0px #bfc9ce, -1px 0px 0px #bfc9ce, 0px 1px 0px #bfc9ce, 0px -1px 0px #bfc9ce;
+    line-height: 18px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    border: 1px solid #3E5A6D;
+    background: rgba(49,74,86,0.92);
+    cursor: grab;
+    width: 100%;
+    color: #222;
+}
+
+.fbiwindow.active .fbiwindowtitle {
+   background: -moz-linear-gradient(top, rgba(156,190,203,0.92) 0%, rgba(94,148,170,0.92) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(156,190,203,0.92)), color-stop(100%,rgba(94,148,170,0.92)));
+    background: -webkit-linear-gradient(top, rgba(156,190,203,0.92) 0%,rgba(94,148,170,0.92) 100%);
+    background: -o-linear-gradient(top, rgba(156,190,203,0.92) 0%,rgba(94,148,170,0.92) 100%);
+    background: -ms-linear-gradient(top, rgba(156,190,203,0.92) 0%,rgba(94,148,170,0.92) 100%);
+    background: linear-gradient(to bottom, rgba(156,190,203,0.92) 0%,rgba(94,148,170,0.92) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e69cbecb', endColorstr='#e65e94aa',GradientType=0 );
+    border: 1px solid #bfc9ce;
+
+    
+}
+
+.fbiwindowtitleleft img {
+    vertical-align: text-top;
+    margin-right: 5px;
+}
+.fbiwindowtitleleft i{font-style:normal;}
+.fbiwindowtitleleft i:before{content: "[";}
+.fbiwindowtitleleft i:after{content: "]";}
+
+.fbiwindowtitleleft {
+    height: 20px;
+    float: left;
+    margin: 3px 0px 0px 5px;
+}
+
+.fbiwindowtitleright {
+    float: right;
+    margin: 0px 0px 0px 0px;
+}
+
+.fbiwindowtitleright span {
+    color: black;
+    text-decoration: none;
+    font-size: 24px;
+    display: inline-block;
+    height: 25px;
+    width: 25px;
+    text-align: center;
+    margin-left: 5px;
+    cursor: default;
+}
+
+.fbiwindowtitleright span:hover {
+    background-color: red;
+}
+
+.fbiwindowcontent {
+    display: block;
+    /*width:100%;
+    height: 100%;*/
+    background-color: rgba(0, 0, 0, 0.95);
+    position: absolute;
+    top: 27px;
+    left: 0px;
+    bottom: 0px;
+    right: 0px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.fbiwindowmudutu .fbiwindowcontent{
+    background-color:black !important;
+}
+
+
+.fbiwindowcontent.fbiwindowcontentimage{
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.fbiwindowcontent.fbiwindowcontentimage.small{
+ 
+    background-size: auto;
+   
+}
+
+.fbiwindowcontent.fbiwindowcontentsuspectdatabase, .fbiwindowcontent.fbiwindowmudutuinner {
+      top: 96px !important;
+}
+
+.fbiwindowcontent .fbiwindowcontentinner {
+    display: block;
+    height: auto;
+    /*max-height: 50%;*/
+}
+
+.fbiwindowcontent p,
+.fbiwindowcontent h1,
+.fbiwindowcontent h2,
+.fbiwindowcontent h3,
+.fbiwindowcontent h4,
+.fbiwindowcontent li {
+    color: white;
+}
+
+.fbiwindowcontent input,
+.fbiwindowsuspectdatabasesearchsmall input,
+.fbibluebutton, 
+.fbiwindowcontent textarea {
+    min-width: 200px;
+    max-width: 650px;
+    width: 45%;
+    border: 2px solid #116699;
+    color: black;
+    font-size: 16px;
+    padding: 2px 5px;
+}
+.fbiblackbutton{
+    min-width: 200px;
+    max-width: 100%;
+    border: 2px solid #333;
+    color: white;
+    background-color: black;
+    font-size: 16px;
+    padding: 2px 5px;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+}
+
+.fbiwindowcontent input[type="image"]{
+    width:auto;
+    border:none !important;
+    min-width: 0px;
+    max-width: 999px;
+}
+
+.fbiwindowcontent input[type="image"]:hover{
+    filter: brightness(1.2);
+}
+
+.fbiwindowcontent input:hover,
+.fbiwindowsuspectdatabasesearchsmall input:hover,
+.fbibluebutton:hover,
+.fbiwindowcontent textarea:hover {
+    border: 2px solid #3388bb
+}
+
+.fbiblackbutton:hover{
+    border: 2px solid #888;
+}
+
+.fbiwindowcontent input:focus,
+.fbiwindowcontent input:active,
+.fbiwindowsuspectdatabasesearchsmall input:focus,
+.fbiwindowsuspectdatabasesearchsmall input:active,
+.fbibluebutton:focus,
+.fbibluebutton:active,
+.fbiwindowcontent textarea:focus,
+.fbiwindowcontent textarea:active {
+    border: 2px solid #0084BD;
+}
+
+.fbiblackbutton:focus, .fbiblackbutton:active{
+    border: 2px solid #ccc;
+}
+
+.fbiwindowcontent input[type="submit"],
+.fbiwindowcontent input[type="button"],
+.fbiwindowsuspectdatabasesearchsmall input[type="submit"],
+.fbiwindowsuspectdatabasesearchsmall input[type="button"],
+.fbibluebutton {
+    background-color: #1371a9;
+    color: white;
+    width: 20%;
+}
+
+.fbiwindow2coltableweapons input[type="button"]{
+    width: 100% !important;
+    max-width:999px;
+    min-width:0px;
+}
+.fbibluebutton{width:100%; max-width: 1000px;}
+.steamlogout input{
+    width:10% !important;
+    background-color:gray !important;
+    border:2px solid silver;
+    padding:1px 3px !important;
+    font-size:12px !important;
+}
+.fbibluebuttonmostwanted{max-width:400px !important;}
+
+.fbiwindowblackmarketbrowser .fbifirearmsdbimg p{
+    text-align: center;
+}
+
+.fbiwindowblackmarketbrowser a.fbibluebutton{
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    margin:0 auto;
+    max-width: 80%;
+    min-width: 200px;
+}
+
+.fa-external-link{
+	font-size:13px !important;
+	vertical-align:middle !important;
+	margin-right:5px !important;
+}
+
+.bootnote {
+    font-size: 13px;
+    color: #999 !important;
+}
+
+
+/* Error Box */
+
+.fbiwindowerrorsleft {
+    float: left;
+    margin-right: 20px;
+    padding: 20px;
+    min-height: 150px;
+}
+
+.fbiwindowerrorsleft i {
+    font-size: 90px;
+    color: #0084BD;
+}
+
+.fbiwindowerrorsright {
+    float: left;
+    padding: 10px;
+}
+
+
+/* Most WAnted */
+
+.fbiwindowmainsuspecttitle {
+    /*display: table-row;*/
+    display: none;
+    width: 100%;
+    background-color: rgba(0, 130, 187, 0.9);
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 60px;
+    text-align: center;
+    padding: 10px;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.fbiwindowcontent h2 {
+    font-size: 48px;
+}
+
+.fbiwindowcontent h3 {
+    font-size: 36px;
+}
+
+.fbiwindowcontentbox {
+    /* padding: 15px !important;*/
+    max-width: 800px;
+    margin: 0px auto;
+    padding:20px auto;
+}
+
+.fbiwindowcontentboxinner {
+    padding: 10px;
+    background-color: rgba(31, 33, 38, 0.85);
+    border-top: 1px solid #4d4d4d;
+    border-left: 1px solid #4d4d4d;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+}
+
+.fbiwindowcontentboxinner.nopadding{
+    padding:0px;
+}
+
+.fbiwindowcontentboxinner2 {
+    padding: 5px;
+    background-color: #303744;
+    border-top: 3px solid #ff9900;
+    border-bottom: 1px solid #000;
+    margin: 5px;
+}
+
+
+
+.fbiwindowcontentboxinnertitle1 {
+    background: #444952;
+    background: -moz-linear-gradient(top, #444952 0%, #34383f 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#444952), color-stop(100%,#34383f));
+    background: -webkit-linear-gradient(top, #444952 0%,#34383f 100%);
+    background: -o-linear-gradient(top, #444952 0%,#34383f 100%);
+    background: -ms-linear-gradient(top, #444952 0%,#34383f 100%);
+    background: linear-gradient(to bottom, #444952 0%,#34383f 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#242424', endColorstr='#262626', GradientType=0);
+    font-weight: normal;
+    font-size: 18px !important;
+    text-transform: uppercase !important;
+    text-align: left !important;
+    border-top: 1px solid #656c7a;
+    border-left: 1px solid #656c7a;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    padding:3px 8px;
+    display: block;
+    margin: 0px !important;
+}
+
+.fbiwindowcontentboxinnertitle2 {
+  
+    font-weight: normal;
+    font-size: 16px !important;
+ 
+    text-align: left !important;
+   
+    padding:5px;
+    display: block;
+    margin: 0px !important;
+}
+
+
+.fbiwindowcontentboxinnertitle3 {
+  
+    font-weight: normal !important;
+    font-size: 16px !important;
+ 
+    text-align: left !important;
+   
+    padding:0px 0px 5px;
+    display: block;
+    margin: 0px !important;
+    border-bottom:3px solid #FF9900;
+}
+
+
+
+
+.fbiwindowcontentboxcolumn {}
+
+.fbiwindowcontentboxcolumninner {
+    background-color:#393d45;
+    border-top: 1px solid #656c7a;
+    border-left: 1px solid #656c7a;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    padding:5px 10px;
+}
+
+.fbiwindowcontentboxcolumninnertitle {
+    background: #444952;
+    background: -moz-linear-gradient(top, #444952 0%, #34383f 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#444952), color-stop(100%,#34383f));
+    background: -webkit-linear-gradient(top, #444952 0%,#34383f 100%);
+    background: -o-linear-gradient(top, #444952 0%,#34383f 100%);
+    background: -ms-linear-gradient(top, #444952 0%,#34383f 100%);
+    background: linear-gradient(to bottom, #444952 0%,#34383f 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#444952', endColorstr='#34383f',GradientType=0 );
+    font-weight: normal;
+    font-size: 18px !important;
+    border-top: 1px solid #656c7a;
+    border-left: 1px solid #656c7a;
+    border-bottom: 1px solid black;
+    border-right: 1px solid black;
+    padding: 3px 8px;
+    display: block;
+    margin: 0px !important;
+}
+
+.fbiwindowcontentboxcolumninner li{margin:2px 0px 2px 15px;}
+
+.fbiwindowsuspectdatabasemainpad{height: 20px;}
+
+.fbiwindowsuspectdatabasemaininner {
+    display: table;
+    width: 100%;
+}
+
+.fbiwindowsuspectdatabasemainsecret{
+    background-image: url('../img/secret/trim-top.png'), url('../img/secret/trim-bottom.png'), url('../img/secret/trim-left.png'), url('../img/secret/trim-right.png'), url('../img/secret/trim-bg.jpg');
+    background-position: top center, bottom center, left top, right top, center top;
+    background-repeat: repeat-x, repeat-x, repeat-y, repeat-y, repeat;
+    padding:70px 0px;
+}
+
+
+
+.fbiwindowsuspectdatabasemainsecret .fbiwindowcontentboxinnertitle1{
+    background:url('../img/secret/trim-title.png');
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+}
+
+.fbiwindowsuspectdatabasemainsecret .fbiwindowcontentboxcolumninnertitle{
+     background:url('../img/secret/trim-title.png');
+    background-repeat: repeat-x;
+    background-size: auto 100%;
+}
+
+.fbiwindowsuspectdatabaseleft {
+     display: table-cell;
+   width:50%;
+    vertical-align: top;
+  
+}
+
+.fbiwindowsuspectdatabaseleft .fbiwindowcontentboxcolumninner{
+    display: block;
+    position: relative;
+    
+
+}
+
+
+.fbiwindowsuspectdatabaseleft .fbiwindowsuspectdatabasetopsketch {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+   
+    background-size: cover;
+    background-position: center center;
+    
+    position: relative;
+    min-height: 500px;
+    z-index: 5;
+    cursor: pointer;
+}
+
+.fbiwindowsuspectdatabaseleft .fbiwindowsuspectdatabasetopmask {
+  display: block;
+    width: 85px;
+    height: 110px;
+    background-color: rgba(0,0,0,0.3);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center center;
+    border: 2px solid gray;
+    position: absolute;
+    bottom:20px;
+    right: 20px;
+    z-index: 10;
+    cursor: pointer;
+}
+
+
+
+.fbiwindowsuspectdatabaseleft a:hover {
+    border: 2px solid #0084BD;
+}
+
+
+
+.fbiwindowsuspectdatabaseright {
+    width: 49%;
+    padding-left: 1%;
+    display: table-cell;
+    vertical-align: top;
+}
+.fbiwindowsuspectdatabaserighttoc:hover{
+    background-color:#4E5360;
+}
+
+.fbiwindowsuspectdatabaserightleft a {
+    display: block;
+    width: 100%;
+    height: 450px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+
+.fbiwindowsuspectdatabasesearch {
+    text-align: center;
+}
+
+.fbiwindowsuspectdatabasesearchsmall {
+    display: table;
+    width: 100%;
+  
+    position: absolute;
+    top: 26px;
+    left: 0px;
+   
+    z-index: 50;
+    background: #1e5799;
+    background: -moz-linear-gradient(top, #1e5799 0%, #082c41 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e5799), color-stop(100%,#082c41));
+    background: -webkit-linear-gradient(top, #1e5799 0%,#082c41 100%);
+    background: -o-linear-gradient(top, #1e5799 0%,#082c41 100%);
+    background: -ms-linear-gradient(top, #1e5799 0%,#082c41 100%);
+    background: linear-gradient(to bottom, #1e5799 0%,#082c41 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#082c41',GradientType=0 );
+}
+
+.fbiwindowsuspectdatabasesearchsmalleft {
+   /* width: 45%;*/
+    display: table-cell;
+    height: 50px;
+    vertical-align: middle;
+}
+
+.fbiwindowsuspectdatabasesearchsmall h4,
+.fbiwindowsuspectdatabasesearchsmall p {
+    margin: 10px;
+    font-weight: normal;
+}
+
+.fbiwindowsuspectdatabasesearchsmalleft h4 {
+    line-height: 50px;
+    font-size: 20px;
+    padding-left: 75px;
+}
+
+.fbiwindowsuspectdatabasesearchsmalleft img {
+    float: left;
+    margin-right: 10px;
+    text-align: center;
+    height: 50px;
+    width: auto;
+}
+
+.fbiwindowsuspectdatabasesearchsmallright {
+    /*width: 70%;*/
+    display: table-cell;
+    height: 50px;
+    vertical-align: middle;
+    text-align: right;
+}
+
+.fbiwindowsuspectdatabase {
+    text-align: center;
+}
+
+.fbiwindowsuspectdatabase a {
+    display: inline-block;
+    background-position: center center;
+    background-size: contain;
+    border: 1px solid #FFF;
+    margin: 0px 10px;
+    background-repeat: no-repeat;
+    padding: 10px;
+}
+
+.fbialigncenter {
+    text-align: center
+}
+.fbiimgfloatright{float:right; margin-left: 10px;}
+
+
+.fbimostusedarmors, .fbimostusedgadgets, .fbitotalheists, .fbitotalheistssuccess, .fbitop5heistsattempts, .fbitop5heistssuccess {
+
+    height: 400px
+}
+
+
+
+.fbiwindowtableverticalmid{vertical-align: middle;}
+.fbiwindowrightleaningtable{display: table; }
+.fbiwindowrightleaningtableleft{display: table-cell}
+.fbiwindowrightleaningtableright{display: table-cell; width:20%;}
+
+.fbiwindow2coltable{ width:100%;}
+.fbiwindow2coltable td{ vertical-align: top;}
+.fbiwindow2coltablecol50{width:49%; margin:1%;}
+.fbiwindow2coltablecol25{width:23%; margin:1%;}
+
+
+.fbiwindow2coltableweapons{width:100%;}
+
+.fbiwindow2coltableweapons th{  font-weight: normal;
+    font-size: 16px !important;
+ 
+    text-align: left !important;
+   
+    padding:5px;
+    margin: 2px !important;
+    
+    
+    border-bottom:3px solid #FF9900;
+}
+.fbiwindow2coltableweapons thead{}
+
+.fbiwindow2coltableweaponsclick{display: block;
+    width:100%;
+    height: 90px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size:contain;
+    cursor: pointer;
+    position: relative;
+}
+.fbiwindow2coltableweaponsclick span{display: block;
+position: absolute;
+bottom:5px;
+right:5px;}
+
+.fbiwindow2coltableweapons tbody tr{
+    background-color:#5d6471;
+    margin:2px;
+    
+
+}
+.fbiwindow2coltableweapons tbody tr:nth-child(even){
+    background-color:#818997;
+
+
+}
+.fbiwindow2coltableweapons tbody th{background:#1F2126; text-align: center !important;}
+.fbiwindow2coltableweapons tbody td{width:20%; border-right:1px solid #424851;}
+.fbiwindow2coltableweapons tbody td:nth-child(1){
+    background-color:#545a67;
+}
+.fbiwindow2coltableweapons tbody td:nth-child(2){
+    background-color:#494e59;
+}
+.fbiwindow2coltableweapons tbody td:nth-child(3){
+    background-color:#42434A;
+}
+.fbiwindow2coltableweapons tbody td:nth-child(4){
+    background-color:#343840;
+}
+.fbiwindow2coltableweapons tbody td:last-child{
+    border-right: none;
+    background-color:#292d34;
+}
+.fbiwindow2coltableweapons tbody td:hover{outline: 1px solid #ff9900; }
+
+
+
+
+.fbiinnerstatstable{width:100%; color:white;}
+
+.fbiinnerstatstable thead{
+    border-bottom:3px solid #ff9900;
+}
+
+.fbiinnerstatstable thead th{
+    padding:3px 6px;
+    text-align: left;
+    font-weight: normal;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.fbiinnerstatstable thead th:hover{background-color: #393939}
+
+.fbiinnerstatstable thead th.sorting-desc, .fbiinnerstatstable thead th.sorting-asc{
+    background-color:#3e424b;
+    background-position: right center;
+    background-repeat: no-repeat;
+}
+.fbiinnerstatstable thead th.sorting-desc{
+    background-image: url('../img/sort-1.png');
+}
+.fbiinnerstatstable thead th.sorting-asc{
+    background-image: url('../img/sort-2.png');
+}
+
+
+.fbiinnerstatstable tbody{
+
+}
+
+.fbiinnerstatstable tbody tr{
+    background-color:#5d6471;
+    
+
+}
+.fbiinnerstatstable tbody tr:nth-child(even){
+    background-color:#818997;
+
+
+}
+.fbiinnerstatstable tbody tr td{padding: 5px; vertical-align: middle;}
+.fbiinnerstatstable tbody tr td b{font-weight: normal; color:red;}
+.fbiinnerstatstable tbody tr td i{font-style: normal; color:navy;}
+
+.fbiwindowcontentsuspectdatabaseloadout .fbiinnerstatstable tbody tr td{padding:0px !important;}
+
+.fbiinnerstatstableclicktd tbody tr{cursor: pointer;}
+.fbiinnerstatstableclicktd tbody tr:hover{outline: 1px solid #ff9900;}
+.fbiinnerstatstableclicktdex {cursor: pointer;}
+.fbiinnerstatstableclicktdex:hover {outline: 1px solid #ff9900;}}
+
+.fbiinnerskillstable{width:40% !important; display: inline-table; margin: 10px 5px;}
+.fbiinnerskillstable thead img{width:30px; height: 30px;}
+.fbiinnerskillstable thead td{padding:0px !important;}
+.fbiinnerskillstable td{text-align: center;}
+.fbiinnerskillstable tbody img{width:39px; height: 39px; margin:0 auto; padding:3px;}
+.fbiinnerskillstable tbody img.skillinactive{opacity:0.1;}
+.fbiinnerskillstable tbody img.skillactive{opacity:1;}
+.fbiinnerskillstable tbody img.skillactiveace{opacity:1; 
+    background-image: url('../img/skill-aced.png');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+
+}
+
+.fbiinnerskillstabletitle{font-size:18px; height: 30px; font-weight: bold;}
+
+
+.fbiinnerskillstablemid{
+    width:100%;
+    margin:0px !important;
+    padding:0px !important;
+    border-right:4px solid #2F3338;
+}
+.fbiwindowcontentsuspectdatabaseloadout .fbiinnerstatstable tbody tr td .fbiinnerskillstablemid td{padding:7px !important;}
+
+.fbiinnerskillstablemid3{border-right: none !important;}
+
+
+.fbiinnerskillstablemidbtm{
+   background-color: #2F3338;
+   color:white;
+}
+
+.fbiachievements .fbiachievementsimg{display: inline-block;margin:5px; 
+filter: brightness(130%) saturate(20%);
+-webkit-filter: brightness(130%) saturate(20%);
+opacity:0.1;
+ }
+ .fbiachievements .fbiachievementsimg.fbiachievementsimgearned{
+
+opacity:1;
+
+ }
+.fbiachievementsinner{text-align: center;}
+
+.fbiskillsinner{text-align: center;}
+
+
+
+.fbitableofcontents li{list-style: none; margin:0px; padding:2px 0px 2px 20px;
+    background-image: url('../img/ico-fil.png');
+    background-position: center left;
+    background-repeat: no-repeat;
+}
+.fbitableofcontents li:hover{
+    cursor: pointer;
+    color:#3388BB;
+}
+
+.fbitablecharmaskshid, .fbitablecharsuitshid{display: none;}
+
+
+.ui-tabs .ui-tabs-panel{padding:10px !important;}
+.ui-tabs-nav {display: table !important; margin: 0px 0px 10px !important;}
+.ui-tabs-nav li{display: table-cell !important; width: 25% !important; margin: 0px !important; float: none !important;}
+.ui-tabs-nav .ui-tabs-anchor{
+    background: #444952;
+    background: -moz-linear-gradient(top, #444952 0%, #34383f 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#444952), color-stop(100%,#34383f));
+    background: -webkit-linear-gradient(top, #444952 0%,#34383f 100%);
+    background: -o-linear-gradient(top, #444952 0%,#34383f 100%);
+    background: -ms-linear-gradient(top, #444952 0%,#34383f 100%);
+    background: linear-gradient(to bottom, #444952 0%,#34383f 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#444952', endColorstr='#34383f',GradientType=0 );
+    font-weight: normal;
+    font-size: 16px !important;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #656C7A #000 #000 #656C7A;
+    padding: 3px 0px !important;
+    display: block !important;
+    margin: 0px !important;
+    color:white;
+    width: 191px !important;
+    text-align: center;
+	text-decoration:none;
+}
+
+.ui-tabs-nav .ui-state-hover .ui-tabs-anchor, .ui-tab:hover .ui-tabs-anchor{
+    background: #636a77;
+    background: -moz-linear-gradient(top, #636a77 0%, #565d68 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#636a77), color-stop(100%,#565d68));
+    background: -webkit-linear-gradient(top, #636a77 0%,#565d68 100%);
+    background: -o-linear-gradient(top, #636a77 0%,#565d68 100%);
+    background: -ms-linear-gradient(top, #636a77 0%,#565d68 100%);
+    background: linear-gradient(to bottom, #636a77 0%,#565d68 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#636a77', endColorstr='#565d68',GradientType=0 );
+}
+.ui-tabs-nav .ui-state-active .ui-tabs-anchor, .ui-tabs-nav .ui-state-active{
+    background: #6f7f9b;
+    background: -moz-linear-gradient(top, #6f7f9b 0%, #64738e 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#6f7f9b), color-stop(100%,#64738e));
+    background: -webkit-linear-gradient(top, #6f7f9b 0%,#64738e 100%);
+    background: -o-linear-gradient(top, #6f7f9b 0%,#64738e 100%);
+    background: -ms-linear-gradient(top, #6f7f9b 0%,#64738e 100%);
+    background: linear-gradient(to bottom, #6f7f9b 0%,#64738e 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6f7f9b', endColorstr='#64738e',GradientType=0 );
+    }
+
+
+
+.fbimodusinner{
+    display: table;
+    width:100%;
+    vertical-align: top;
+}
+
+.fbimodusinnerleft{
+ display: table-cell;
+ width:49%;
+ vertical-align: top;
+}
+
+.fbimodusinnerleftleft{
+    display: block;
+    float: left;
+    width:49%;
+    margin-right: 1%
+}
+
+.fbimodusinnerleftright{
+    display: block;
+    float: right;
+    width:49%;
+    margin-left: 1%
+}
+
+
+.fbimodusinnermid{
+ display: table-cell;
+ width:23%;
+ padding-left:1%;
+ vertical-align: top;
+}
+
+
+.fbimodusinnerright{
+    display: table-cell;
+    width:23%;
+    padding-left: 1%;
+    vertical-align: top;
+}
+
+.fbimodusinnerleftinner{
+    padding:10px;
+    background-color:#393D45;
+}
+
+.fbimodusappearanceclick{display: block;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+ 
+    background-size: cover;
+    background-position: center center;
+
+    position: relative;
+    min-height: 235px;
+    z-index: 5;
+    cursor: pointer;
+    
+}
+
+.fbimodusdisguiseclick{display: block;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+
+    background-size: cover;
+    background-position: center center;
+
+    position: relative;
+    min-height: 235px;
+    z-index: 5;
+    cursor: pointer;
+    
+}
+
+.fbimoduslevelcontainer{margin:10px 0px;
+border-top:1px solid #504330;
+border-bottom:1px solid #504330;
+padding:10px 0px;
+;}
+.fbimoduslevelcontainernumber{
+    background-color: #393D45;
+    color:white;
+    font-size:35px !important;
+    font-weight: bold;
+    display: block;
+    text-align: center;
+
+}
+.fbimoduslevelcontainerleft{float:left; width: 49%}
+.fbimoduslevelcontainerright{float:right; width: 49%}
+.fbimodusequipclickable{
+    position: relative;
+    min-height: 100px;
+
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+    background-color:#393D45;
+    border-top:3px solid #d88811;
+    cursor: pointer;
+	text-shadow: 0px 0px 4px black, 0px 0px 12px black, 0px 0px 25px black;
+}
+.fbimodusequipclickable.first{border-top:none !important;}
+.fbimodusequipclickable span{
+    position: absolute;
+    bottom:10px;
+    right: 10px;
+    text-transform: uppercase;
+}
+.fbimodusequipclickable.fbimodusequipnotclickable{cursor: default;}
+.fbimodusequipclickable.fbimodusequipclickablefifty{
+	display:inline-block;
+	width:49%;
+	vertical-align:top;
+	background-size: auto 85%;
+}
+
+
+.fbimodusequipfiftybox{
+	display:block;
+	text-align:center;
+}
+
+.fbimodusstats{margin:15px 0px;}
+
+.fbiwindowcontent.fbiinfobrowser {
+      top: 96px !important;
+      padding-right:20px;
+      padding-top:10px;
+      padding-right:20px;
+	  display:flex !important;
+
+}
+
+.fbiinfobrowserleft{position: sticky; top:0px; left:0px;
+   padding:0px 20px; margin-right:20px;
+  height:100%;
+   border-right:1px solid white;
+   width:320px;
+   overflow-y:scroll;
+  }
+
+
+.fbiinfobrowserleft > ul{
+	min-width:70%;
+	padding:10px 0px;
+}
+
+  .fbiinfobrowserleft li{margin:5px 0px; background-image: url("../img/ico-fil.png");
+    background-repeat: no-repeat;
+  list-style:none;
+    background-position: left center;
+    padding-left:24px;
+    cursor: pointer;
+    }
+    .fbiinfobrowserleft li:hover{
+        outline: 1px solid #5F8696;
+     background-color: rgba(95,134,150, 0.3);
+    }
+
+
+  .fbiinfobrowserright{padding-left:10px; width:100%;}
+.fbiinfobrowserright h4{font-size:32px; margin-top:0px; margin-bottom:0px;}
+
+.fbiinfobrowserright h5{font-size:26px; margin-top:0px; margin-bottom:0px;}
+
+.fbiinfobrowserright p{font-size: 18px;}
+
+.fbiinfobrowserfolder{display: none;}
+
+.fbiinfobrowserfolderimg{float:right; max-width:40%; height: auto; margin:0px 0px 15px 15px; cursor: pointer;}
+
+  .fbiinfobrowserintrofolders{}
+
+  
+
+  .fbiinfobrowserintrofolders li{
+    display: inline-block;
+    width:230px;
+    margin:0px 5px 5px 0px;
+     background-image: url("../img/folder-normal.png");
+    background-repeat: no-repeat;
+    background-position: 5px 8px;
+    height:55px;
+    
+    font-size:24px;
+    line-height: 40px;
+    padding-left:76px;
+     white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-top:15px;
+  }
+  .fbiinfobrowserintrofolders li:hover{
+    background-image: url("../img/folder-hover.png");
+    outline: 1px solid #5F8696;
+     background-color: rgba(95,134,150, 0.3);
+     cursor: pointer;
+  }
+
+
+  .fbiinfobrowserfolder:after{display: block; clear:both; content: ""; width:100%;}
+
+  .commnotes{color:#59C7FF !important;}
+
+
+
+
+
+.fbiwindowcontent.fbiwindowinternal {
+      top: 96px !important;
+       padding-left:230px;
+      padding-top:10px;
+      padding-right:20px;
+}
+
+
+.fbiinternalleft{position: absolute; top:0px; left:0px;
+  width:180px; padding-right: 20px;  padding-top:10px; padding-left:20px;}
+
+
+
+  .fbiinternalleft li{margin:9px 0px; background-image: url("../img/ico-fil.png");
+    background-repeat: no-repeat;
+  list-style:none;
+    background-position: left center;
+    padding-left:40px;
+    cursor: pointer;
+    font-size:20px;
+    }
+
+     .fbiinternalleft li.fbiinternalleftinbox{
+            background-image: url("../img/email/inbox.png");
+     }
+      .fbiinternalleft li.fbiinternalleftoutbox{
+            background-image: url("../img/email/outbox.png");
+     }
+      .fbiinternalleft li.fbiinternalleftspam{
+            background-image: url("../img/email/inbox.png");
+     }
+      .fbiinternalleft li.fbiinternallefttrash{
+            background-image: url("../img/email/trash.png");
+     }
+    .fbiinternalleft li:hover{
+        outline: 1px solid #5F8696;
+     background-color: rgba(95,134,150, 0.3);
+    }
+
+
+  .fbiinternalright{height: 100%; border-left:1px solid white; padding-left:10px;}
+.fbiinternalright h4{font-size:32px; margin-top:0px; margin-bottom:0px;}
+
+.fbiinternalright p{font-size: 18px;}
+
+
+.fbiinternalright table{width:100%;}
+
+.fbiinternalright table td{padding:3px 5px; font-size:16px;}
+
+.fbiinternalright table thead{
+    border-bottom:3px solid #ff9900;
+}
+
+.fbiinternalright table thead th{
+    padding:3px 6px;
+    text-align: left;
+    font-weight: normal;
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+.fbiinternalright table thead th:hover{background-color: #393939}
+
+.fbiinternalright table thead th.sorting-desc, .fbiinternalright table thead th.sorting-asc{
+    background-color:#3e424b;
+    background-position: right center;
+    background-repeat: no-repeat;
+}
+.fbiinternalright table thead th.sorting-desc{
+    background-image: url('../img/sort-1.png');
+}
+.fbiinternalright table thead th.sorting-asc{
+    background-image: url('../img/sort-2.png');
+}
+
+
+.fbiinternalright table tbody{
+
+}
+
+.fbiinternalright table tbody tr{
+    background-color:#5d6471;
+    
+    opacity:0.7;
+    position: relative;
+    z-index: 6;
+}
+.fbiinternalright table tbody tr:nth-child(even){
+    background-color:#818997;
+
+}
+
+.fbiinternalright table tbody tr.unread{
+ 
+    opacity:1;
+    z-index: 5;
+}
+
+
+.fbiinternalright table tbody tr:hover{cursor: pointer; outline:2px solid #FF9900; z-index: 10;}
+
+.fbiinternalright table tr td:first-child{width:40px;}
+.fbiinternalright table tr td span{
+    display: block;
+    width: 35px;
+    height: 37px;
+    background-image: url('../img/email/opened.png');
+}
+.fbiinternalright table tr.unread td span{
+    display: block;
+    width: 35px;
+    height: 37px;
+    background-image: url('../img/email/unopened.png');
+}
+
+
+.fbiwindowcontentemailheader{
+    background-color:#4B515C;
+    padding:15px;
+}
+.fbiwindowcontentemailheader p{margin:3px 0px;}
+.fbiwindowcontentemailheader p strong{display: inline-block; width:80px; text-align: right; margin-right:10px;}
+
+
+.fbiwindowcontentemailcontent{padding:15px; font-size:17px;}
+.fbiinternalrightoutbox, .fbiinternalrightspam, .fbiinternalrighttrash{display: none;}
+
+.fbiwindowcontentaboutfbi{ padding:15px 15px 15px 15px; margin-top:68px;}      
+.fbiwindowcontentaboutfbi h5{display: block; clear:both; font-size:34px; margin:10px 0px;}
+.fbiwindowcontentaboutfbi p{font-size:16px;}
+
+.fbiwindowcontentaboutfbi img{float:right; max-width:35%; margin:0px 0px 15px 15px;}
+
+.fbiwindowwebinner{ padding:0px; margin-top:68px; overflow-y: hidden;}      
+.fbiwindowwebinner h5{display: block; clear:both; font-size:34px; margin:10px 0px;}
+.fbiwindowwebinner p{font-size:16px;}
+
+.fbiwindowwebinner iframe{width:100%;
+height: 100%;
+border:none;}
+
+
+.fbiwindowcontent.fbifirearmsdb {
+      top: 96px !important;
+        padding:10px;
+
+}
+
+
+.fbifirearmsdb h2{margin:0px 0px 10px;}
+
+.fbifirearmsdb h4{margin:15px 0px 10px; font-size:24px !important;}
+
+
+.fbifirearmsdbimg{display: inline-block; background-color:#393D45; border-width: 1px;
+border-style: solid;
+border-color: #656C7A #000 #000 #656C7A; margin:10px;
+    padding:15px;
+	width:300px;
+}
+
+
+
+.fbifirearmsdbimg img{display: inline-block; cursor: pointer !important;}
+.fbifirearmsdbimg img:hover{
+    filter: brightness(1.2);
+}
+.fbifirearmsdbimg.fbifirearmsdbimgthrown img{
+    cursor: default !important;
+}
+
+.fbifirearmsdbimg h5{ font-size:24px !important; margin:0px 0px 10px;
+display: block;
+height:50px;}
+
+.fbifirearmsdbimg table{width:100%; margin-top:20px;}
+.fbifirearmsdbimg tbody th{width:50%; text-align: left; font-size:16px;padding:2px 5px; font-weight: normal !important}
+.fbifirearmsdbimg tbody td{font-size:16px; padding:2px 5px;}
+.fbifirearmsdbimg tbody tr{
+    background-color:#5d6471;
+    margin:2px;
+    
+
+}
+.fbifirearmsdbimg tbody tr:nth-child(even){
+    background-color:#818997;
+
+
+}
+
+
+
+.fbifirearmsdbprimaryselectorcont, .fbifirearmsdbsecondaryselectorcont{
+    padding:10px 0px;
+}
+
+.fbifirearmsdbprimaryselector, .fbifirearmsdbsecondaryselector{
+    display: inline-block;
+    font-size: 18px !important;
+    margin: 0px 0px 0px 10px;
+    
+    padding:2px 7px;
+    background-color: #393D45;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #656C7A #000 #000 #656C7A;
+}
+.fbifirearmsdbprimaryselector:hover, .fbifirearmsdbsecondaryselector:hover{
+    background-color:#5D6471;
+    cursor: pointer;
+}
+
+.fbifirearmsdbprimaryselector.active, .fbifirearmsdbsecondaryselector.active{
+    background-color: #818997;
+     border-color: #858CA0 #444 #444 #858CA0;
+}
+
+
+
+.fbiwindowfirearmsdatabaseweaponselectorcont{
+    padding:10px 0px;
+}
+
+.fbiwindowfirearmsdatabaseweaponselector{
+    display: inline-block;
+    font-size: 24px !important;
+    margin: 0px 0px 0px 10px;
+    
+    padding:2px 7px;
+    background-color: #393D45;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #656C7A #000 #000 #656C7A;
+}
+.fbiwindowfirearmsdatabaseweaponselector:hover{
+    background-color:#5D6471;
+    cursor: pointer;
+}
+
+.fbiwindowfirearmsdatabaseweaponselector.active {
+    background-color: #818997;
+     border-color: #858CA0 #444 #444 #858CA0;
+}
+
+.fbiwindowfirearmsdatabasesecondarycont, .fbiwindowfirearmsdatabaselegendarycont, .fbiwindowfirearmsdatabasemeleecont, .fbiwindowfirearmsdatabasethrowncont{
+    display: none;
+}
+
+
+.fbifirearmsdbimgthrown {
+    max-width: 300px;
+    min-height: 310px;
+}
+
+.fbifirearmsdbimgthrown tbody tr{
+    background-color: transparent !important;
+    font-weight: normal !important;
+}
+
+/* Intro Window */
+
+#fbiintrowindow {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #000;
+    color: #32CD32;
+    padding: 15px 15px;
+    font-family: monospace;
+    z-index: 999999999;
+    font-size: 14px;
+    margin: 0px 0px;
+    word-wrap: break-word;
+}
+
+.fbiwindowcontentboxwantedfor{
+	max-height:300px;
+	overflow-y:scroll;
+    position: relative;
+}
+
+
+.fbiwindowcontentboxwantedwhfinished img{
+        position: absolute;
+    top: 40%;
+    left: 14%;
+    max-width: 80%;
+}
+
+.fbiwindowcontentboxwantedwhfinished ul{
+    opacity:0.1;
+}
+
+.fbiwindowcontentboxcharinfo{
+	height:300px;
+}
+
+/* Clown Case CopyPasta */
+
+.clowncasepaste{
+    font-family: 'Source Code Pro', monospace ;
+    padding:5px 15px;
+    margin:10px;
+    border-top:1px dashed #0082BB;
+     border-bottom:1px dashed #0082BB;
+     border-left:3px solid #99B3D1;
+}
+
+.clowncasepaste p {
+    font-size: 18px;
+}
+.clowncasepaste p b {
+    color:#0082BB;
+}
+
+/* Legendaries */
+
+.fbifirearmsdblegendary {
+    display: table;
+    background-color: #393D45;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #656C7A #000 #000 #656C7A;
+    margin: 10px auto;
+    padding: 15px;
+    width:97%;
+
+}
+
+.fbifirearmsdblegendary:nth-child(odd) {
+    background-color: #5D6471;
+}
+
+.fbifirearmsdblegendary h5 {
+    font-size: 30px !important;
+    margin: 0px 0px 0px;
+    display: block;
+    
+    height: 50px;
+    text-align: center;
+}
+
+.fbifirearmsdblegendaryleft p{
+    text-align: center;
+    margin:0px 0px;
+}
+
+.fbifirearmsdblegendaryleft{
+    display: table-cell;
+    vertical-align: top;
+    width:320px;
+}
+
+.fbifirearmsdblegendaryleft img{
+    max-height: 200px;
+    margin:20px auto;
+    display: block;
+    max-width: 320px
+}
+
+.fbifirearmsdblegendaryleft img:hover{
+    cursor: pointer;
+}
+
+.fbifirearmsdblegendaryright{
+    display: table-cell;
+    vertical-align: top;
+    
+    /*background-color:#5D6471 !important;*/
+    padding:0px 15px !important;
+}
+
+.fbifirearmsdblegendarysmalldesc{
+    font-size:18px;
+    margin-top:0px !important;
+}
+
+.fbifirearmsdblegendarysmalldescsrc{
+    font-size:15px;
+    color:#ccc;
+    font-style: italic;
+}
+.fbifirearmsdblegendarylongdescinner{
+    display: none;
+    border-left: 5px solid #194D84;
+   
+    padding:10px 20px;
+    background-color: rgba(255,255,255,0.1);
+}
+.fbifirearmsdblegendarylongdesc p {
+    font-size:18px;
+    margin-top:0px !important;
+}
+
+.heistprohide{
+	display:none;
+}
+.fbipermalink {
+    font-size: 12px;
+}
+.fbipermalink span{
+    display: block;
+    text-align: center;
+}
+
+
+.fbipermalink input {
+    width: 96%;
+    color: white;
+    background-color: #222;
+    border: 2px solid #666;
+    font-size: 12px;
+    max-width: 100%;
+    cursor:text;
+}
+
+
+
+/* mudutu */
+
+.fbiwindowmudutuinner{
+   
+}
+
+.fbiwindowmudutuinner p::-moz-selection, .fbiwindowmudutuinner input::-moz-selection, .fbiwindowmudutuinner textarea::-moz-selection{ /* Code for Firefox */
+    color: white;
+    background: darkgreen;
+}
+
+.fbiwindowmudutuinner p::selection, .fbiwindowmudutuinner input::selection, .fbiwindowmudutuinner textarea::selection {
+    color: white;
+    /*background: darkgreen;*/
+}
+
+.fbiwindowmudutuinnerright{
+    float:right;
+    padding:15px;
+    text-align: right;
+    max-width: 30%
+}
+
+.fbiwindowmudutuinnerintro{
+    padding:15px;
+    white-space: pre;
+    /*color:limegreen;*/
+}
+
+
+.fbiwindowmudutuinnercontent{
+    padding:15px;
+  
+}
+
+.dsodimg{
+    filter: drop-shadow(0px 0px 2px orange);
+}
+
+
+/* Cookie Consent */
+
+
+.cc-revoke, .cc-window{
+    font-family: 'Titillium Web', sans-serif !important;
+    z-index: 99999999;
+}
+
+.cc-btn{
+    font-family: 'Titillium Web', sans-serif;
+    text-transform: uppercase;
+}
+
+.cc-window.cc-floating{
+  padding:1em !important;
+}
+
+.cc-bottom{
+    bottom:50px !important;
+}
+
+
+.cc-message{
+    background-image: url('../img/fbi-logo-small.png');
+    background-size: contain;
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left:6em; 
+}
+
+
+.invalidstring{
+	color:red;
+	font-weight:bold;
+	opacity:1;
+	animation: invalidstringblink 0.8s linear infinite alternate;
+	text-shadow:0px 0px 5px white;
+}
+.invalidstring[title]:hover, .invalidstring[data-invstr]:hover{
+	cursor:help;
+}
+
+@keyframes invalidstringblink {
+  from {opacity:1;}
+  to {opacity:0.3;}
+}
+
+
+
+
+/* skins */
+
+.fbiblackmarketintro{
+	display:table;
+	vertical-align:top;
+	width:100%;
+}
+
+.fbiblackmarketintroleft{
+	display:table-cell;
+	text-align:left;vertical-align:top;
+}
+
+.fbiblackmarketintroleft h3{
+	margin-top:0px;
+}
+
+.fbiblackmarketintroleft  p{
+	font-style:italic;
+	color:silver;
+}
+
+.fbiblackmarketintroright{
+	display:table-cell;
+	text-align:right;vertical-align:top;
+	padding-left:20px;
+}
+
+.fbiblackmarketintroright img{
+	max-width:10vw;
+	transform:rotate(6deg);
+}
+
+.fbiwindowblackmarketlogo{
+    max-width: 200px !important;
+}
+.fbiblackmarketskinboxname{
+    line-height: 22px;
+}
+
+.fbifirearmsdbimg h5.fbiblackmarketskinboxname{
+    height: 80px;
+}
+
+.fbiblackmarketskinboxname br{
+    display: none !important;
+}
+
+.fbiblackmarketskinboxname span{
+        font-size: 16px;
+    color: silver;
+    font-weight: normal;
+    display: block;
+    line-height: 16px;
+    margin: 5px 0px;
+} 
+
+
+.fbiblackmarketskinboxname i{
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    color: gray;
+    display: block;
+}
+
+
+.fbiwindowblackmarketbrowser .fbifirearmsdbimg{
+    border-style: outset;
+}
+
+.fbifirearmsdbimgcommon{
+    border-color: #2360d8
+}
+
+.fbifirearmsdbimguncommon{
+    border-color: #9900ff
+}
+
+.fbifirearmsdbimgrare{
+    border-color: #ff00ff
+}
+
+.fbifirearmsdbimgepic{
+    border-color: #ff0000
+}
+
+.fbifirearmsdbimglegendary{
+    border-color: #ffaa00
+}
+
+.fbifirearmsdbimg .fbifirearmsdbimgskin{
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.fbifirearmsdbimg .fbifirearmsdbimgskin img{
+	display:block;
+	margin:0 auto;
+	max-width:100%;
+	max-height:250px;
+	object-fit:contain;
+	object-position: center center;
+}
+
+.fbifirearmsdbimgcommon .fbifirearmsdbimgskin{
+    background-image: url('../img/weapons/skins/rarity-1.png');
+}
+
+.fbifirearmsdbimguncommon .fbifirearmsdbimgskin{
+    background-image: url('../img/weapons/skins/rarity-2.png');
+}
+
+.fbifirearmsdbimgrare .fbifirearmsdbimgskin{
+    background-image: url('../img/weapons/skins/rarity-3.png');
+}
+
+.fbifirearmsdbimgepic .fbifirearmsdbimgskin{
+    background-image: url('../img/weapons/skins/rarity-4.png');
+}
+
+.fbifirearmsdbimglegendary .fbifirearmsdbimgskin{
+    background-image: url('../img/weapons/skins/rarity-5.png');
+}
+
+.fbiblackmarketnoresults{
+	display:none;
+}
+
+.skinsafeform input[type="text"], .skinsafeform select {
+    width: 100% !important;
+    color: black;
+    /*max-width: 180px !important;*/
+    min-width: 120px !important;
+    padding: 3px;
+}
+
+
+.skinsaferaritycommon{
+    background-color: #2360d8;
+	color:white;
+	text-shadow:0px 1px 1px black;
+}
+
+.skinsaferaritycommon:hover, .skinsaferaritycommon:checked{
+	background-color: #2360d8;
+}
+
+.skinsaferarityuncommon{
+    background-color: #9900ff;
+	color:white;
+	text-shadow:0px 1px 1px black;
+}
+
+.skinsaferarityuncommon:hover, .skinsaferarityuncommon:checked{
+	background-color: #9900ff;
+}
+
+.skinsaferarityrare{
+    background-color: #ff00ff;
+	color:white;
+	text-shadow:0px 1px 1px black;
+}
+
+.skinsaferarityrare:hover, .skinsaferarityrare:checked{
+	background-color: #ff00ff;
+}
+
+.skinsaferarityepic{
+    background-color: #ff0000;
+	color:white;
+	text-shadow:0px 1px 1px black;
+}
+
+.skinsaferarityepic:hover, .skinsaferarityepic:checked{
+	background-color: #ff0000;
+}
+
+.skinsaferaritylegendary{
+    background-color: #ffaa00;
+	color:white;
+	text-shadow:0px 1px 1px black;
+
+}
+
+.skinsaferaritylegendary:hover, .skinsaferaritylegendary:checked{
+	background-color: #ffaa00;
+}
+
+
+
+/* scroll bars */
+
+.fbiinfobrowserleft::-webkit-scrollbar, .fbiwindowcontent::-webkit-scrollbar {
+  width: 15px;
+}
+
+.fbiinfobrowserleft::-webkit-scrollbar-button:single-button, .fbiwindowcontent::-webkit-scrollbar-button:single-button {
+  background-color: #5e94aa;
+  display: block;
+  border-style: solid;
+  height: 15px;
+}
+
+/* Up */
+.fbiinfobrowserleft::-webkit-scrollbar-button:single-button:vertical:decrement,
+.fbiwindowcontent::-webkit-scrollbar-button:single-button:vertical:decrement{
+  border-width: 0 8px 8px 8px;
+  border-color: transparent transparent black transparent;
+  margin-bottom:1px;
+}
+
+.fbiinfobrowserleft::-webkit-scrollbar-button:single-button:vertical:decrement:hover,
+.fbiwindowcontent::-webkit-scrollbar-button:single-button:vertical:decrement:hover{
+  border-color: #1371a9 #1371a9 black #1371a9;
+}
+/* Down */
+.fbiinfobrowserleft::-webkit-scrollbar-button:single-button:vertical:increment,
+.fbiwindowcontent::-webkit-scrollbar-button:single-button:vertical:increment{
+  border-width: 8px 8px 0 8px;
+  border-color: black transparent transparent transparent;
+  margin-top:1px;
+}
+
+.fbiinfobrowserleft::-webkit-scrollbar-button:vertical:single-button:increment:hover,
+.fbiwindowcontent::-webkit-scrollbar-button:vertical:single-button:increment:hover{
+  border-color: black #1371a9 #1371a9 #1371a9;
+}
+
+/* Track */
+.fbiinfobrowserleft::-webkit-scrollbar-track, .fbiwindowcontent::-webkit-scrollbar-track {
+  background: #121212;
+}
+
+/* Handle */
+.fbiinfobrowserleft::-webkit-scrollbar-thumb, .fbiwindowcontent::-webkit-scrollbar-thumb {
+  background:  #5e94aa;
+}
+
+/* Handle on hover */
+.fbiinfobrowserleft::-webkit-scrollbar-thumb:hover, .fbiwindowcontent::-webkit-scrollbar-thumb:hover {
+  background: #1371a9;
+}
